@@ -74,6 +74,7 @@
 
     .gb-header-main ul li {
         margin-left: 40px;
+        position: relative;
     }
 
     .gb-header-main ul li i {
@@ -81,10 +82,50 @@
         margin-left: 8px;
     }
 
-    .gb-search i {
+    .searchbar i {
         color: var(--brand-secondary);
-        margin-left: 38px;
-        font-size: 25px;
+        font-size: 22px;
+    }
+
+    .gb-toggle-search {
+        position: absolute;
+        top: 47px;
+        right: -40px;
+        width: 351px;
+        height: auto;
+        line-height: 32px;
+        display: none;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+        border-radius: 8px 0 0 8px;
+    }
+
+    .gb-toggle-search:before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: -27px;
+        right: 41px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid var(--brand-secondary);
+    }
+
+    .gb-toggle-search input[type="text"] {
+        width: 248px;
+        padding: 5px 10px;
+        outline: none;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .gb-toggle-search input[type="button"] {
+        padding: 5px 18px;
+        background: var(--brand-secondary);
+        color: #fff;
+        margin-left: -6px;
+        outline: none;
+        cursor: pointer;
+        border-radius: 0 8px 8px 0;
     }
 
     .gb-header-login ul {
